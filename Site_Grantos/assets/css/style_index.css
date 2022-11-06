@@ -1,0 +1,106 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #fff;
+}
+
+body::after{
+    position: absolute;
+    content: '';
+    height: 50%;
+    width: 60%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    right: 0%;
+    top: 50%;
+    z-index: 3;
+    background-color: #340d77;
+}
+
+body::before{
+    position: absolute;
+    content: '';
+    height: 50%;
+    width: 60%;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    left: 0%;
+    top: 50%;
+    z-index: 4;
+    background-color: #4510a3;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh;
+    padding: 15px 15px 60px;
+}
+
+.titulo #anima{
+    max-width: 1050px;
+    width: 75%;
+}
+
+.btns{
+    display: flex;
+    gap: 20px;
+}
+
+.btns a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    width: 150px;
+    padding: 15px 0px;
+    background-color: #4510a3;
+    color: #fff;
+    font-weight: 600;
+    outline: none;
+    border-radius: 10px;
+}
+
+.btns a span {
+    transition: all 0.2s;
+}
+
+.btns a:hover span, .btns a:focus span {
+    transform: scale(.9);
+    opacity: .85;
+}
+
+
+footer{
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    margin-top: auto;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+/*__________Media Queries__________*/
+
+@media only screen and (max-width: 650px) {
+    body::after, body::before{
+        height: 35%;
+        top: 65%;
+    }
+
+    .titulo{
+        padding: 30px 15px 50px; 
+    }
+
+    .titulo #anima{
+        width: 95%;
+    }
+
+    .btns{
+        gap: 30px;
+        flex-direction: column;
+    }
+
+}

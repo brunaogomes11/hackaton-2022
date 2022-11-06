@@ -1,0 +1,137 @@
+body{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 15px;
+    background-color: #4510a3;
+}
+
+.card{
+    position: relative;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card h2{
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #333;
+}
+
+.card > div{
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card > div input{
+    color: #666;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    outline: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 0px solid transparent;
+    width: 80%;
+    border-bottom: 2px solid #4510a3;
+}
+
+
+.card > div span{
+    font-size: 1rem;
+    padding: 2px 6px;
+    z-index: 1;
+    left: 45px;
+    font-weight: 600;
+    color: #4510a3;
+    display: block;
+    bottom: 15px;
+    position: absolute;
+    transition: 0.2s cubic-bezier(0.0, 0, 0.2, 1);
+}
+
+.card > div input:focus ~ span, .card > div input:valid ~ span{
+    font-size: 0.8rem;
+    transform: translate(-15px, -25px);
+}
+
+.submitBtn{
+    cursor: pointer;
+    min-width: 160px;
+    color: #fff;
+    width: 50%;
+    margin-top: 15px;
+    padding: 20px 10px;
+    border: 2px solid #6119db;
+    background-color: #4510a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    font-weight: 600;
+}
+
+.submitBtn i {
+    transition: all 0.2s;
+}
+
+.submitBtn:hover i, .submitBtn:focus i {
+    transform: scale(.9);
+    opacity: .85;
+}
+
+.login{
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.sair i{
+    position: absolute;
+    font-size: 1.3rem;
+    color: #4510a3;
+    top: 10px;
+    left: 10px;
+    padding: 3px;
+}
+
+.Messagem{
+    opacity: 0;
+    transition: 0.2s;
+    font-size: 0.9rem;
+    padding: 20px 0px;
+}
+
+.boa{
+    background-color: rgba(80, 255, 80, 0.5);
+    opacity: 1;
+}
+
+.error{
+    background-color: rgba(255, 46, 46, 0.5);
+    opacity: 1;
+}
+
+/*__________Media Queries__________*/
+
+@media only screen and (max-width: 500px) {
+    .card > div input{
+        width: 95%;
+    }
+
+    .card > div span{
+        left: 20px;
+    }        
+
+}

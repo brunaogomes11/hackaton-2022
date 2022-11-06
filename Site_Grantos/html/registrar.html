@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bug_animacao.css">
+    <link rel="stylesheet" href="./css/style_registrar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--JS-->
+    <script defer src="./js/bug_animacao.js"></script>
+    <script defer src="./js/script_registrar.js"></script>
+</head>
+<body class="preload">
+    <div class="card">
+        <h2>Criar Conta</h2>
+        <div>
+            <input type="text" required autocomplete="off" id="cnpj">
+            <span>CNPJ</span>
+        </div>
+        <div>
+            <input type="text" required autocomplete="off" id="nomeEmpresa">
+            <span>Nome da Empresa</span>
+        </div>
+        <div>
+            <input type="text" required autocomplete="off" id="senha">
+            <span>Senha</span>
+        </div>
+        <div>
+            <input type="text" required autocomplete="off" id="confirmaSenha">
+            <span>Confirme a Senha</span>
+        </div>
+        <div>
+            <div class="submitBtn"><i>Criar Conta</i></div>
+        </div>
+        <div class="Messagem" id="mensagemBack">
+        </div>
+        <div>
+            <a class="login" href="/login">Já tem Conta?</a>
+        </div>
+        <a href="/" class="sair"><i class="fa-solid fa-reply"></i></a>
+    </div>
+</body>
+</html>

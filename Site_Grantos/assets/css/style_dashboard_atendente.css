@@ -1,0 +1,107 @@
+body{
+    display: grid; 
+    grid-template-columns: 0.3fr 1.7fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "header header"
+        "aside main"; 
+}
+
+.sair {
+    position: fixed;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem
+}
+
+.sair:hover {
+    transform: scale(1.05);
+    color: #0cd2aa;
+}
+
+header {
+    grid-area: header;
+}
+
+h1{
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #fff;
+    background: rgb(0,20,105);
+    background: linear-gradient(98deg, rgba(0,20,105,0.91) 17%, rgba(69,16,163,1) 52%);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px 10px;
+    grid-area: main;
+}
+
+main> div{
+    width: 250px;
+    border-radius: 10px;
+    
+}
+
+.seguro {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: left;
+    font-size: 1.2rem;
+}
+
+aside {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(176deg, rgba(0,20,105,0.91) 17%, rgba(69,16,163,1) 52%);;
+    color: white;
+    grid-area: aside;
+}
+.usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+#userIcon {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 3em;
+}
+
+.icons {
+    font-size: 1.5em;
+    padding: 5px;
+    padding-left: 0;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+aside ul li {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+}
+
+aside ul li:hover {
+    transform: scale(1.05);
+    color: #0cd2aa;
+}
